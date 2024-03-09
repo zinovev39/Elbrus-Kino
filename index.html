@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--    Не забудьте импортировать css файл. Удалите эту строчку-->
+    <title>Эльбрус Кино</title>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="img/logo.svg" alt="Лого" />
+        <ul>
+          <li><a href="#">Мое кино</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Покупки</a></li>
+          <li><span></span></li>
+        </ul>
+        <img src="img/face.png" alt="Личный кабинет" />
+      </nav>
+    </header>
+    <main>
+      <section class="new-subscription">
+        <h2>Новое в подписке<span></span></h2>
+        <div class="items">
+          <div class="item">
+            <div class="banner">
+              <p class="rating">8.4</p>
+              <img src="img/new-subscription-1.png" alt="Нулевой пациент" />
+            </div>
+            <p class="title">Нулевой пациент</p>
+            <p class="desc">2022, Драма, Детектив</p>
+          </div>
+          <div class="item">
+            <div class="banner">
+              <p class="rating">8.9</p>
+              <img src="img/new-subscription-2.png" alt="Мажор 4" />
+            </div>
+            <p class="title">Мажор</p>
+            <p class="desc">2014, драма, криминал</p>
+          </div>
+          <div class="item">
+            <div class="banner">
+              <p class="rating">8.1</p>
+              <img src="img/new-subscription-3.png" alt="Флешбэк" />
+            </div>
+            <p class="title">Флешбэк</p>
+            <p class="desc">2022, боевик, триллер</p>
+          </div>
+          <div class="arrow">
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <section class="recommend-watching">
+        <h2>Рекомендуем посмотреть<span></span></h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="banner">
+                <p class="rating">8.9</p>
+                <img src="img/doctorStrange.jpg" alt="Doctor Strange" />
+              </div>
+              <p class="title">Доктор Стрэндж</p>
+              <p class="desc">2016, Драма, Детектив</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner">
+                <p class="rating">6.6</p>
+                <img src="img/glass.jpg" alt="Glass" />
+              </div>
+              <p class="title">Стекло</p>
+              <p class="desc">2019, Ужасы, Фантастика</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner">
+                <p class="rating">6.2</p>
+                <img src="img/minions.jpg" alt="Minions" />
+              </div>
+              <p class="title">Минь0ны</p>
+              <p class="desc">2015, Мультфилм, Фантастика</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner">
+                <p class="rating">4.9</p>
+                <img src="img/solo.jpg" alt="Solo" />
+              </div>
+              <p class="title">Нулевой пациент</p>
+              <p class="desc">2018, Драма, Триллер</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner">
+                <p class="rating">9.0</p>
+                <img src="img/starWars.jpg" alt="Star Wars" />
+              </div>
+              <p class="title">Звездные Войны</p>
+              <p class="desc">2002, Боевик, Фантастика</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner">
+                <p class="rating">6.7</p>
+                <img src="img/zveropolis.jpg" alt="Zveropolis" />
+              </div>
+              <p class="title">Зверополис</p>
+              <p class="desc">2022, Мультфилм, комедия</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </section>
+    </main>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

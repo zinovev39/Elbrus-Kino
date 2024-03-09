@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #141414;
+  font-family: "IBM Plex Mono";
+}
+
+nav,
+main {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+/* 
+Повторяющиеся классы: 
+ - banner - отвечает за отступ вниз; 
+ - raitng - отвечает за иконку рейтинга на картинке;
+ */
+.banner {
+  margin-bottom: 15px;
+}
+
+.rating {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 12px;
+  border-radius: 6px;
+  background-color: #ffbc5b;
+  font-weight: 600;
+}
+
+/* Header - общие стили */
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: #4520ab;
+}
+
+/* Меню */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul > li {
+  margin-right: 40px;
+}
+
+ul > li a {
+  position: relative;
+  color: #ffffff;
+  opacity: 30%;
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+ul > li a::before {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  width: 100%;
+  height: 2px;
+}
+
+ul > li a:hover {
+  opacity: 100%;
+  color: #ffbc5b;
+  transition: 0.6s;
+}
+
+ul > li a:focus {
+  opacity: 100%;
+  color: #ffbc5b;
+}
+
+ul > li a:focus::before {
+  background-color: #ffbc5b;
+  transition: 0.6s;
+}
+
+ul > li span {
+  position: relative;
+}
+
+ul > li span::before {
+  position: absolute;
+  content: "";
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: 30%;
+}
+
+ul > li span::after {
+  position: absolute;
+  content: "";
+  left: 14px;
+  top: 21px;
+  width: 10px;
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 30%;
+  rotate: 45deg;
+}
+
+ul > li span:hover::before {
+  cursor: pointer;
+  border: 2px solid #ffbc5b;
+  opacity: 100%;
+}
+
+ul > li span:hover::after {
+  cursor: pointer;
+  background-color: #ffbc5b;
+  opacity: 100%;
+}
+
+/* Main */
+h2 {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  color: #ffbc5b;
+}
+
+h2 span {
+  display: none;
+  padding-left: 20px;
+}
+
+h2 span::before {
+  position: absolute;
+  content: "";
+  bottom: 56%;
+  width: 18px;
+  height: 4px;
+  background-color: #ffbc5b;
+  border-radius: 5px;
+  rotate: 55deg;
+}
+
+h2 span::after {
+  position: absolute;
+  content: "";
+  top: 66%;
+  width: 18px;
+  height: 4px;
+  background-color: #ffbc5b;
+  border-radius: 5px;
+  rotate: -55deg;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+h2:hover span {
+  display: inline;
+}
+
+.new-subscription {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.new-subscription .items {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.new-subscription .item {
+  position: relative;
+}
+
+.new-subscription .item img {
+  border-radius: 15px;
+}
+
+.new-subscription .arrow {
+  position: relative;
+}
+
+.new-subscription .arrow span::before {
+  position: absolute;
+  content: "";
+  top: 70px;
+  width: 24px;
+  height: 4px;
+  background-color: #ffbc5b;
+  border-radius: 5px;
+  rotate: 55deg;
+}
+
+.new-subscription .arrow span::after {
+  position: absolute;
+  content: "";
+  top: 87px;
+  width: 24px;
+  height: 4px;
+  background-color: #ffbc5b;
+  border-radius: 5px;
+  rotate: -55deg;
+}
+
+.new-subscription .title {
+  margin-bottom: 10px;
+  color: #989898;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.new-subscription .desc {
+  color: #515151;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.new-subscription .item .banner:hover {
+  scale: 1.1;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.new-subscription .item .banner:hover ~ p {
+  color: #ffffff;
+  transition: 0.6s;
+}
+
+.recommend-watching {
+  position: relative;
+}
+
+/* Swiper */
+.swiper {
+  display: flex;
+  width: 90%;
+  padding: 30px 20px;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  color: #ffbc5b;
+}
+
+.swiper-slide .banner:hover {
+  cursor: pointer;
+  scale: 1.02;
+  transition: 0.6s;
+}
+
+.banner:hover ~ p {
+  color: #ffffff;
+  transition: 0.6s;
+}
+
+.swiper-slide .title {
+  margin-bottom: 10px;
+  color: #989898;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.swiper-slide .desc {
+  color: #515151;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
