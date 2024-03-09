@@ -262,6 +262,7 @@ h2:hover span {
 /* Swiper */
 .swiper {
   display: flex;
+  z-index: 0;
   width: 90%;
   padding: 30px 20px;
 }
